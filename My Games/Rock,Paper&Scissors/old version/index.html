@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper & Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="backdrop"></div>
+
+    <div id="choose">
+      <div class="options">
+        <div class="box">
+          <input type="radio" value="rock" name="option" />
+          <label for="rock"><img src="../images/rock.jpg" alt="Rock" /></label>
+        </div>
+        <div class="box">
+          <input type="radio" value="paper" name="option" />
+          <label for="paper"><img src="../images/paper.jpg" alt="Paper" /></label>
+        </div>
+        <div class="box">
+          <input type="radio" value="scissor" name="option" />
+          <label for="scissor"><img src="../images/scissor.jpg" alt="Scissor" /></label>
+        </div>
+      </div>
+      <button class="submit">submit</button>
+    </div>
+
+    <header>
+      <h1 class="title">Rock, Paper & Scissors</h1>
+    </header>
+
+    <main>
+      <div class="div1">
+        <button class="btn" id="start">Start</button>
+        <div class="res"></div>
+      </div>
+    </main>
+  </body>
+</html>

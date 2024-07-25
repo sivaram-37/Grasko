@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+header {
+  background-color: rgb(255, 196, 0);
+  width: 100%;
+  height: 8vh;
+}
+
+header h1 {
+  color: rgb(255, 22, 22);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 3px;
+}
+
+#backdrop {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+}
+
+#backdrop.visible {
+  display: block;
+}
+
+main {
+  background-color: rgb(214, 214, 214);
+  width: 100%;
+  height: 92vh;
+  display: flex;
+  justify-content: center;
+}
+.div1 {
+  height: 15em;
+  width: 30em;
+  margin-top: 12%;
+  /* background-color: aqua; */
+  text-align: center;
+}
+
+.btn {
+  margin-top: 10%;
+  margin-bottom: 5%;
+  height: 8vh;
+  width: 30vh;
+  font-size: xx-large;
+  font-weight: 900;
+  border: 2px solid rgb(0, 167, 0);
+  border-radius: 2rem;
+  background-color: #fff;
+  color: rgb(0, 204, 0);
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: rgb(1, 255, 1);
+  color: #fff;
+  transition: ease-in 0.3s;
+}
+
+#choose {
+  position: fixed;
+  z-index: 100;
+  background: hsla(0, 100%, 100%, 0.5);
+  border-radius: 10px;
+  width: 50%;
+  height: 50vh;
+  top: 20vh;
+  left: 25%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  display: none;
+}
+
+#choose.visible {
+  display: block;
+}
+
+.options {
+  padding: 5%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 12%;
+}
+
+.opt-btn {
+  border: none;
+  border-radius: 20px;
+  border: 3px solid rgb(255, 1, 1);
+  height: 150px;
+  width: 150px;
+}
+
+img {
+  height: 110px;
+  width: 110px;
+  border-radius: 20px;
+}
+
+.opt-btn:hover {
+  border: 5px solid rgb(1, 255, 1);
+  transition: ease-in-out 0.1s;
+}
+
+img:hover {
+  height: 140px;
+  width: 140px;
+  transition: ease-in-out 0.1s;
+}
+
+.submit {
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: skyblue;
+  border: none;
+  font-size: x-large;
+  padding: 5px;
+  font-weight: 600;
+}
+.submit:hover {
+  background-color: red;
+  transition: ease-in-out 0.3s;
+  color: #fff;
+}

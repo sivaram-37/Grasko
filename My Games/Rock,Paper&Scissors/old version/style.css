@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+header {
+  background-color: rgb(255, 196, 0);
+  width: 100%;
+  height: 8vh;
+}
+
+header h1 {
+  color: rgb(255, 22, 22);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 3px;
+}
+
+#backdrop {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+}
+
+#backdrop.visible {
+  display: block;
+  pointer-events: all;
+}
+
+main {
+  background-color: rgba(189, 189, 189, 0.836);
+  width: 100%;
+  height: 92vh;
+  display: flex;
+  justify-content: center;
+}
+.div1 {
+  height: 15em;
+  width: 30em;
+  margin-top: 12%;
+  /* background-color: aqua; */
+  text-align: center;
+}
+
+.btn {
+  margin-top: 10%;
+  margin-bottom: 5%;
+  height: 8vh;
+  width: 30vh;
+  font-size: xx-large;
+  font-weight: 900;
+  border: 2px solid #000;
+  border-radius: 2rem;
+  background-color: #fff;
+  color: #000;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  transition: ease-in 0.3s;
+}
+
+#choose {
+  position: fixed;
+  z-index: 100;
+  background: white;
+  border-radius: 10px;
+  width: 60%;
+  height: 50vh;
+  top: 20vh;
+  left: 20%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  display: none;
+  text-align: center;
+}
+
+#choose.visible {
+  display: block;
+}
+
+.options {
+  padding: 5%;
+  display: flex;
+  justify-content: space-around;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  border: 3px solid rgb(1, 255, 1);
+  border-radius: 20px;
+}
+
+input[type="radio"]:checked + label img {
+  border-color: #ff0000; /* Example color when selected */
+}
+
+.submit {
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: skyblue;
+  border: none;
+  font-size: x-large;
+  padding: 5px;
+  font-weight: 600;
+}
+.submit:hover {
+  background-color: red;
+  transition: ease-in-out 0.3s;
+  color: #fff;
+}
