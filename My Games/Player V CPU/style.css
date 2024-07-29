@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+header {
+  background-color: rgb(66, 66, 66);
+  height: 10vh;
+  width: 100vw;
+  color: #bdbdbdcb;
+  text-align: center;
+}
+header h1 {
+  font-size: xx-large;
+  font-weight: 900;
+  padding-top: 10px;
+}
+
+main {
+  background-color: rgb(139, 139, 139);
+  width: 100vw;
+  height: 75vh;
+  padding-top: 15vh;
+}
+
+.box {
+  background-color: #fff;
+  margin-left: 35%;
+  height: 13rem;
+  width: 26rem;
+  padding: 1rem;
+}
+
+.bar {
+  width: 100%;
+  margin: 1rem;
+  height: 4rem;
+  text-align: center;
+  font-size: 13mm;
+}
+.bar#player {
+  color: red;
+  background-color: blue;
+}
+.bar#computer {
+  color: blue;
+  background-color: red;
+}
