@@ -32,6 +32,10 @@ footer {
   text-align: center;
 }
 
+.droppable {
+  background-color: aquamarine;
+}
+
 ul {
   list-style: none;
   margin: 0;
