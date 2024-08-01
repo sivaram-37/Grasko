@@ -34,3 +34,12 @@ function getUserLocation() {
 }
 
 button.addEventListener("click", getUserLocation);
+
+// Promise.all;
+Promise.all([getLocation(), setTimer(2000)]).then((data) => console.log(data));
+
+// Promise.race;
+Promise.race([getLocation(), setTimer(0)]).then((data) => console.log(data));
+
+// Promise.allSettled;
+Promise.allSettled([getLocation(), setTimer(3000)]).then((data) => console.log(data));

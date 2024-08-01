@@ -1,83 +1,63 @@
 const button = document.querySelector("button");
 const output = document.querySelector("p");
 
-const timer = (duration) => {
-  const timerPromise = new Promise((resolve, reject) => {
+const setTimer = (duration) => {
+  const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve("Timer is done...!!!");
+      resolve("Done!");
     }, duration);
   });
-  return timerPromise;
+  return promise;
 };
 
-const getCoordinates = () => {
+const getLocation = () => {
   const promise = new Promise((resolve, reject) => {
     navigator.geolocation.getCurrentPosition(
-      (pos) => resolve(pos),
-      (err) => reject(err)
+      (pos) => {
+        resolve(pos);
+      },
+      (error) => {
+        reject(error);
+      }
     );
   });
   return promise;
 };
 
-function getUserLocation() {
-  let coordinates;
-  getCoordinates()
-    .then((pos) => {
-      coordinates = pos;
-      return timer(2000);
-    })
-    .then((data) => {
-      console.log(data, coordinates);
-    });
-}
-
-button.addEventListener("click", getUserLocation);
-
-// const setTimer = (duration) => {
-//   const promise = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve("Done!");
-//     }, duration);
+// // without async and await
+// function trackUserHandler() {
+//   let position;
+//   getLocation()
+//     .then((pos) => {
+//       position = pos;
+//       return setTimer(2000);
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//       return "Can't get the location";
+//     })
+//     .then((data) => {
+//       console.log(data, position);
+//     });
+//   setTimer(1000).then(() => {
+//     console.log("Timer Done...!");
 //   });
-//   return promise;
-// };
-
-// const getLocation = () => {
-//   const promise = new Promise((resolve, reject) => {
-//     navigator.geolocation.getCurrentPosition(
-//       (pos) => {
-//         resolve(pos);
-//       },
-//       (error) => {
-//         reject(error);
-//       }
-//     );
-//   });
-//   return promise;
-// };
-
-// async function trackUserHandler() {
-//   let userLocation = await getLocation();
-//   let timer = await setTimer(2000);
-//   console.log(timer, userLocation);
-//   // let position;
-//   // getLocation()
-//   //   .then((pos) => {
-//   //     position = pos;
-//   //     return setTimer(2000);
-//   //   })
-//   //   .catch((error) => {
-//   //     console.log(error);
-//   //     return "Can't get the location";
-//   //   })
-//   //   .then((data) => {
-//   //     console.log(data, position);
-//   //   });
-//   // setTimer(1000).then(() => {
-//   //   console.log("Timer Done...!");
-//   // });
-//   // console.log("Getting coordinates....");
+//   console.log("Getting coordinates....");
 // }
 
-// button.addEventListener("click", trackUserHandler);
+//
+
+// with async and await
+async function trackUserHandler() {
+  let userLocation;
+  let timer;
+  try {
+    userLocation = await getLocation();
+    timer = await setTimer(2000);
+  } catch (error) {
+    console.log(error);
+  }
+  console.log(timer, userLocation);
+}
+
+button.addEventListener("click", trackUserHandler);
