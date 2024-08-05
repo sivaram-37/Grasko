@@ -12,10 +12,22 @@
       <h1><pre>Player   v/s   Computer</pre></h1>
     </header>
     <main>
-      <div class="box">
-        <div class="bar" id="player">Player</div>
-        <div class="bar" id="computer">Computer</div>
-      </div>
+      <section id="health-level">
+        <label for="">
+          Player's Health :
+          <progress id="player" class="box" max="100" value="100"></progress>
+        </label>
+        <label for="">
+          Computer's Health :
+          <progress id="computer" class="box" max="100" value="100"></progress>
+        </label>
+      </section>
+      <section id="controls">
+        <button class="btn">Attack</button>
+        <button class="btn">Combo-Attack</button>
+        <button class="btn">Medi-Kit</button>
+        <button class="btn">Battle Historys</button>
+      </section>
     </main>
   </body>
 </html>

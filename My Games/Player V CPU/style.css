@@ -3,47 +3,22 @@
   margin: 0;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-
 header {
-  background-color: rgb(66, 66, 66);
-  height: 10vh;
-  width: 100vw;
-  color: #bdbdbdcb;
+  background-color: rgb(0, 0, 0);
+  color: rgba(128, 255, 0, 0.856);
   text-align: center;
-}
-header h1 {
-  font-size: xx-large;
-  font-weight: 900;
-  padding-top: 10px;
-}
-
-main {
-  background-color: rgb(139, 139, 139);
   width: 100vw;
-  height: 75vh;
-  padding-top: 15vh;
+  height: 6vh;
 }
 
-.box {
-  background-color: #fff;
-  margin-left: 35%;
-  height: 13rem;
-  width: 26rem;
-  padding: 1rem;
+#health-level {
+  border: 3px solid rgb(201, 177, 177);
+  border-radius: 1rem;
+  width: 40rem;
+  height: 8rem;
 }
-
-.bar {
-  width: 100%;
-  margin: 1rem;
+progress {
+  display: block;
   height: 4rem;
-  text-align: center;
-  font-size: 13mm;
-}
-.bar#player {
-  color: red;
-  background-color: blue;
-}
-.bar#computer {
-  color: blue;
-  background-color: red;
+  width: 20rem;
 }
