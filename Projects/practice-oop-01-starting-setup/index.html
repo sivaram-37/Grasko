@@ -6,18 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Project Board</title>
     <link rel="stylesheet" href="assets/styles/app.css" />
-    <script src="assets/scripts/app.js" defer></script>
+    <!-- <script src="assets/scripts/Utility/Analytics.js" defer></script> -->
+    <script src="assets/scripts/app.js" defer type="module"></script>
   </head>
   <body>
-    <template id="temp">
+    <template id="tooltip">
       <h2>More Info</h2>
       <p></p>
     </template>
-
     <header id="main-header">
       <h1>Project Planner</h1>
     </header>
-
     <section id="active-projects">
       <header>
         <h2>Active Projects</h2>
@@ -27,6 +26,7 @@
           id="p1"
           data-extra-info="Got lifetime access, but would be nice to finish it soon!"
           class="card"
+          draggable="true"
         >
           <h2>Finish the Course</h2>
           <p>Finish the course within the next two weeks.</p>
@@ -37,6 +37,7 @@
           id="p2"
           data-extra-info="Not really a business topic but still important."
           class="card"
+          draggable="true"
         >
           <h2>Buy Groceries</h2>
           <p>Don't forget to pick up groceries today.</p>
@@ -54,6 +55,7 @@
           id="p3"
           data-extra-info="Super important conference! Fictional but still!"
           class="card"
+          draggable="true"
         >
           <h2>Book Hotel</h2>
           <p>
@@ -64,8 +66,8 @@
         </li>
       </ul>
     </section>
-    <footer>
-      <button id="stop-btn">Stop Analytics</button>
-    </footer>
+    <!-- <footer>
+      <button id="stop-analytics-btn">Stop Analytics</button>
+    </footer> -->
   </body>
 </html>
