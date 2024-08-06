@@ -4,11 +4,17 @@
   "description": "JS Tooling",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "built": "webpack"
   },
   "author": "sivaram",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^6.4.0"
+    "eslint": "^6.4.0",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
   }
 }
