@@ -1,0 +1,14 @@
+{
+  "name": "tooling",
+  "version": "1.0.0",
+  "description": "JS Tooling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sivaram",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.4.0"
+  }
+}
