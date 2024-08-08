@@ -8,18 +8,25 @@ export class Modal {
   show() {
     if ("content" in document.createElement("template")) {
       const modalContent = document.importNode(this.modalTemplate.content, true);
-      const modalElement = modalContent.querySelector(".modal");
-      const backdropEl = modalContent.querySelector(".backdrop");
+      this.modalElement = modalContent.querySelector(".modal");
+      this.backdropEl = modalContent.querySelector(".backdrop");
       const contentElement = document.importNode(this.contentTemplate.content, true);
 
-      modalElement.appendChild(contentElement);
-      document.body.insertAdjacentElement("afterbegin", modalElement);
-      document.body.insertAdjacentElement("afterbegin", backdropEl);
+      this.modalElement.appendChild(contentElement);
+      document.body.insertAdjacentElement("afterbegin", this.modalElement);
+      document.body.insertAdjacentElement("afterbegin", this.backdropEl);
     } else {
       // fallback code
       alert(this.fallbackText);
     }
   }
 
-  hide() {}
+  hide() {
+    if (this.modalElement) {
+      this.modalElement.remove();
+      this.backdropEl.remove();
+      this.modalElement = null;
+      this.backdropEl = null;
+    }
+  }
 }
