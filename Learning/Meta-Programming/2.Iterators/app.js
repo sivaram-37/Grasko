@@ -1,8 +1,8 @@
-const emp = {
+const company = {
   curEmpInd: 0,
-  employees: ["siva", "vinoth", "suresh", "chethan", "abi", "aakash"],
+  employees: ["siva", "giri", "john"],
   next() {
-    if (this.curEmpInd < this.employees.length) {
+    if (this.curEmpInd >= this.employees.length) {
       return { value: this.curEmpInd, done: true };
     }
     const retVal = { value: this.employees[this.curEmpInd], done: false };
@@ -11,16 +11,13 @@ const emp = {
   },
 };
 
-// console.log(emp.next());
-// console.log(emp.next());
-// console.log(emp.next());
-// console.log(emp.next());
-// console.log(emp.next());
-// console.log(emp.next());
-// console.log(emp.next());
+// console.log(company.next());
+// console.log(company.next());
+// console.log(company.next());
+// console.log(company.next());
 
-let employee = emp.next();
+let employee = company.next();
 while (!employee.done) {
   console.log(employee.value);
-  employee = emp.next();
+  employee = company.next();
 }

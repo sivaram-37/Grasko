@@ -24,16 +24,14 @@
 //   console.log(emp);
 // }
 
-// // // You can't loop through like this
-// // console.log(company.getNext().next());
-// // console.log(company.getNext().next());
-// // console.log(company.getNext().next());
-// // console.log(company.getNext().next());
+// // You can't loop through like this
+// console.log(company.getNext().next());
+// console.log(company.getNext().next());
+// console.log(company.getNext().next());
+// console.log(company.getNext().next());
 
 // // We have to loop like this
 // let iter = company.getNext();
-// console.log(iter.next());
-// console.log(iter.next());
 // console.log(iter.next());
 // console.log(iter.next());
 // console.log(iter.next());
