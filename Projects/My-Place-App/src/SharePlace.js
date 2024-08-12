@@ -31,10 +31,20 @@ class PlaceFinder {
     } else {
       this.map = new Map(coordinates);
     }
-    this.shareBtn.disabled = false;
-    this.shareLinkElement.value = `${location.origin}/my-place?address=${encodeURI(
-      address
-    )}&lat=${coordinates.lat}&lng=${coordinates.lng}`;
+    fetch("http://localhost:3000/add-location", {
+      method: "POST",
+      body: JSON.stringify({
+        address: address,
+        lat: coordinates.lat,
+        lng: coordinates.lng,
+      }),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        this.shareBtn.disabled = false;
+        this.shareLinkElement.value = `${location.origin}/my-place?location=${data.locId}`;
+      });
   }
 
   locateUserHandler() {

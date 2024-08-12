@@ -1,20 +1,19 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const locationRoutes = require("./routes/location");
+const { nextTick } = require("process");
 
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.use((req, res, next) => {
-  res.setHeader("Content-Type", "text/html");
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST,GET,OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   next();
 });
 
-app.use((req, res, next) => {
-  const userName = req.body.username || "Unknown user";
-  res.send(
-    `<h1>Welcome ${userName}</h1><form method='post' action='/'><input type='text' name='username'/><button type='submit'>SUBMIT</button></form>`
-  );
-});
+app.use(locationRoutes);
 
 app.listen(3000);
